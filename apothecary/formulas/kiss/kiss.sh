@@ -31,7 +31,7 @@ function build() {
     if [ $CROSSCOMPILING -eq 1 ]; then
         source ../../${TYPE}_configure.sh
     fi
-    make  -j${PARALLEL_MAKE} TARGET_DIR=$TYPE
+    make CFLAGS="-I. -fPIC" SHELL="/bin/bash -x" -j${PARALLEL_MAKE} TARGET_DIR=$TYPE
 }
 
 # executed inside the lib src dir, first arg $1 is the dest libs dir root
