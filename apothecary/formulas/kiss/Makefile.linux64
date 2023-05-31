@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-I./include
+CFLAGS=-fPIC -I./include
 
 LIB=libkiss.a
 LIBDEST=./lib/linux64/
