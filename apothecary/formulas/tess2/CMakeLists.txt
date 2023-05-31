@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 project(tess2)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 file(GLOB SRCS "Source/*.cpp" "Source/*.c" "Source/*.h" "Source/*.hpp")
 include_directories("Include")
 add_library(tess2 STATIC ${SRCS} ${SRCS_INCL})
