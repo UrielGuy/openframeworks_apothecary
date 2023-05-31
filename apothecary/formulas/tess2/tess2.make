@@ -19,6 +19,8 @@ ifndef AR
   AR = ar
 endif
 
+CPPFLAGS=-fPIC
+
 ifeq ($(config),debug)
   OBJDIR     = obj/Debug/tess2
   TARGETDIR  = .
